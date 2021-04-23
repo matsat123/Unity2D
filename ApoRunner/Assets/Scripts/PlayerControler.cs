@@ -58,7 +58,7 @@ public class PlayerControler : MonoBehaviour
 
     private bool IsGrounded()
     {
-        bool hit = Physics.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, Vector3.down, new Quaternion { }, 0.2f, whatIsGround);
+        bool hit = Physics.Raycast(boxCollider.bounds.center, Vector3.down, 2f, whatIsGround);
         return hit;
         
     }
